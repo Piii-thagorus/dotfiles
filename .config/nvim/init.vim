@@ -52,6 +52,7 @@ let g:airline#extensions#tabline#enabled = 1
 " ------------------------------------------------------------
 colorscheme gruvbox
 
+hi Normal guibg=None "Make transparent background
 " ------------------------------------------------------------
 " Nvim configuration
 " ------------------------------------------------------------
@@ -65,6 +66,7 @@ set splitbelow          " Always split below
 set tabstop=4           " number of visual spaces per TAB
 set shiftwidth=4        " Number of spaces to use for autoindent
 set expandtab           " Make tabs spaces
+
 if has("nvim-0.5.0")
     set signcolumn=number   " Merge signcolumn and number column into one
 endif
@@ -77,8 +79,16 @@ endif
 " Key mappings
 " ------------------------------------------------------------
 
+"____________________________________________________________
 " NERDTree
-nmap        <F2>      :NERDTreeToggle<CR>
+" _____________________________________________________________
+nmap        <F2>     :NERDTreeToggle<CR>
+
+" Start NERDTree when nvim launches and put cursor on other window
+autocmd VimEnter * NERDTree | wincmd p
+
+let NERDTreeWinSize = 25 "Set the panel width
+
 " tagbar
 nmap        <F8>      :TagbarToggle<CR>
 
@@ -92,3 +102,4 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
