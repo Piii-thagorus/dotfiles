@@ -92,6 +92,9 @@ let NERDTreeWinSize = 25 "Set the panel width
 " tagbar
 nmap        <F8>      :TagbarToggle<CR>
 
+"toggle search highlighting
+nnoremap <F3>   :set hlsearch!<CR>
+
 " coc-nvim
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
