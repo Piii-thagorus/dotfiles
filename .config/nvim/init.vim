@@ -95,6 +95,9 @@ nmap        <F8>      :TagbarToggle<CR>
 "toggle search highlighting
 nnoremap <F3>   :set hlsearch!<CR>
 
+"Changing escape key
+inoremap jj <ESC>
+
 " coc-nvim
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
