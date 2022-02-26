@@ -109,3 +109,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="colorls --sd -A"
+
+#Close the terminal if it was inactive for 30 minutes.
+TMOUT=1800
