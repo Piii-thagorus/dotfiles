@@ -111,4 +111,4 @@ source $ZSH/oh-my-zsh.sh
 alias ls="colorls --sd -A"
 
 #Close the terminal if it was inactive for 30 minutes.
-TMOUT=1800
+#TMOUT=1800
